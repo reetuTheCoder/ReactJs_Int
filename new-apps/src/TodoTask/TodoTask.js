@@ -8,11 +8,28 @@ const TodoTask = () => {
     setInputdata(e.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
     if (inputdata.trim() !== "") {
-      setTasks([...tasks, inputdata]);
+      const addTodos = {
+        id: Date.now(),
+        textVal: inputdata.trim(),
+      };
+      setTasks([...tasks, addTodos]);
       setInputdata("");
     }
+  };
+
+  const handleDelete = (id) => {
+    console.log("delete todo", id);
+    setTasks(
+      tasks.filter((task)=> {
+        console.log("task.id", task.id);
+        
+       return task.id !== id
+      })
+    );
   };
 
   return (
@@ -30,8 +47,16 @@ const TodoTask = () => {
 
       <div>
         <ul>
-          {tasks.map((task, index) => {
-            return <li key={index}>{task}</li>;
+          {tasks.map((task) => {
+            return (
+              <div key={task.id}>
+                <li>
+                  {/* <span>{task.id}</span> */}
+                  {task.textVal}
+                </li>
+                <button onClick={() => handleDelete(task.id)}>Delete</button>
+              </div>
+            );
           })}
         </ul>
       </div>
