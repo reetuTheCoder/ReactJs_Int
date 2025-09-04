@@ -1,16 +1,20 @@
 import "./App.css";
-import ContactForms from "./contactForms/ContactForms";
-import CounterApps from "./counter/CounterApps";
-import TodoTask from "./TodoTask/TodoTask";
+import { SideEffect } from "./Study/StateManage/SideEffect";
+// import ContactForms from "./contactForms/ContactForms";
+// import CounterApps from "./counter/CounterApps";
+// import TodoTask from "./TodoTask/TodoTask";
 
 function App() {
   return (
     <div className="App">
-      <CounterApps />
+      {/* <CounterApps />
       <br /> <br /> <br />
       <ContactForms />
       <br /> <br /> <br />
-      <TodoTask />
+      <TodoTask /> */}
+
+
+      <SideEffect/>
     </div>
   );
 }
