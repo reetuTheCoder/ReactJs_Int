@@ -4,6 +4,7 @@ import Child1 from "./CallBackHook/Child1";
 import Child2 from "./CallBackHook/Child2";
 import Child3 from "./CallBackHook/Child3";
 import Child4 from "./CallBackHook/Child4";
+import MainComp from "./SimpleAPICalls/MainComp";
 // import {
 //   CreateCounter,
 //   LocalStorageExample,
@@ -72,7 +73,7 @@ const firstname = "Niranjan"
         <DerivedState />
       </div> */}
 
-      <div>
+      {/* <div>
         <div>
           <div>
             <h1>Learn callback hook</h1>
@@ -88,6 +89,10 @@ const firstname = "Niranjan"
           <br />
           <Child4 list={memorizedUserList}/>
         </div>
+      </div> */}
+
+      <div>
+        <MainComp/>
       </div>
     </div>
   );
