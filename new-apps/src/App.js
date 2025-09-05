@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import "./App.css";
 import Child1 from "./CallBackHook/Child1";
 import Child2 from "./CallBackHook/Child2";
@@ -22,7 +22,12 @@ function App() {
     console.log("just testing to pass in the child");
   }, []);
 
-  const value = { value: count * 5 };
+  // const value = { value: count * 5 };
+  const memorizedvalue = useMemo(()=>{
+    return { value: count * 5 }
+  },[count])
+
+  
   const userlist = ["Reetu", "Alakh", "Naksh"];
   // const [showTimer, setShowTimer] = useState(true);
 
@@ -71,7 +76,7 @@ function App() {
           <br />
           <Child2 />
           <br />
-          <Child3 data={value}/>
+          <Child3 data={memorizedvalue}/>
           <br />
           <Child4 list={userlist}/>
         </div>
