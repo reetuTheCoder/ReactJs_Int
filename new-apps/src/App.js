@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import Child1 from "./CallBackHook/Child1";
 import Child2 from "./CallBackHook/Child2";
@@ -16,9 +16,9 @@ import Child2 from "./CallBackHook/Child2";
 function App() {
   const [count, setCount] = useState(0);
 
-  const handleClickMe = () => {
+  const handleClickMe = useCallback(() => {
     console.log("just testing to pass in the child");
-  };
+  });
   // const [showTimer, setShowTimer] = useState(true);
 
   // useEffect(() => {
