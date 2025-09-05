@@ -62,7 +62,7 @@ function App() {
           <button onClick={()=> setCount(count + 1)}>Add</button>
         </div>
         <br/> <br/> <br/>
-        <Child1/>
+        <Child1 onClick={handleClickMe}/>
          <br/>
         <Child2/>
         </div>
