@@ -2,6 +2,8 @@ import React, { useCallback, useEffect, useState } from "react";
 import "./App.css";
 import Child1 from "./CallBackHook/Child1";
 import Child2 from "./CallBackHook/Child2";
+import Child3 from "./CallBackHook/Child3";
+import Child4 from "./CallBackHook/Child4";
 // import {
 //   CreateCounter,
 //   LocalStorageExample,
@@ -18,7 +20,10 @@ function App() {
 
   const handleClickMe = useCallback(() => {
     console.log("just testing to pass in the child");
-  },[]);
+  }, []);
+
+  const value = { value: count * 5 };
+  const userlist = ["Reetu", "Alakh", "Naksh"];
   // const [showTimer, setShowTimer] = useState(true);
 
   // useEffect(() => {
@@ -57,14 +62,18 @@ function App() {
       <div>
         <div>
           <div>
-          <h1>Learn callback hook</h1>
-          <p>Count: {count}</p>
-          <button onClick={()=> setCount(count + 1)}>Add</button>
-        </div>
-        <br/> <br/> <br/>
-        <Child1 onClick={handleClickMe}/>
-         <br/>
-        <Child2/>
+            <h1>Learn callback hook</h1>
+            <p>Count: {count}</p>
+            <button onClick={() => setCount(count + 1)}>Add</button>
+          </div>
+          <br /> <br /> <br />
+          <Child1 onClick={handleClickMe} />
+          <br />
+          <Child2 />
+          <br />
+          <Child3 data={value}/>
+          <br />
+          <Child4 list={userlist}/>
         </div>
       </div>
     </div>
