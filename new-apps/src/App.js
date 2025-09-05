@@ -1,27 +1,27 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import {
-  CreateCounter,
-  LocalStorageExample,
-  Timer,
-  WindowSize,
-} from "./Study/StateManage/SideEffect";
-import PerformanceOptimization, { DerivedState } from "./Study/StateManage/PerformanceOptimization";
-// import ContactForms from "./contactForms/ContactForms";
-// import CounterApps from "./counter/CounterApps";
-// import TodoTask from "./TodoTask/TodoTask";
+// import {
+//   CreateCounter,
+//   LocalStorageExample,
+//   Timer,
+//   WindowSize,
+// } from "./Study/StateManage/SideEffect";
+// import PerformanceOptimization, { DerivedState } from "./Study/StateManage/PerformanceOptimization";
+// // import ContactForms from "./contactForms/ContactForms";
+// // import CounterApps from "./counter/CounterApps";
+// // import TodoTask from "./TodoTask/TodoTask";
 
-function App() {
-  const [showTimer, setShowTimer] = useState(true);
+// function App() {
+//   const [showTimer, setShowTimer] = useState(true);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      // console.log("Runs once after 3s");
-      setShowTimer(false);
-    }, 3000);
+//   useEffect(() => {
+//     const timeout = setTimeout(() => {
+//       // console.log("Runs once after 3s");
+//       setShowTimer(false);
+//     }, 3000);
 
-    return () => clearTimeout(timeout);
-  }, []);
+//     return () => clearTimeout(timeout);
+//   }, []);
 
   return (
     <div className="App">
@@ -42,10 +42,10 @@ function App() {
       <br /> <br /> <br />
       <WindowSize /> */}
 
-      <div>
+      {/* <div>
         <PerformanceOptimization/>
         <DerivedState />
-      </div>
+      </div> */}
     </div>
   );
 }
