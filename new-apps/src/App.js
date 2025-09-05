@@ -35,6 +35,8 @@ const memorizedUserList = useMemo(()=>{
 return ["Reetu", "Alakh", "Naksh"];
 },[])
 
+const firstname = "Niranjan"
+
   // const [showTimer, setShowTimer] = useState(true);
 
   // useEffect(() => {
@@ -80,7 +82,7 @@ return ["Reetu", "Alakh", "Naksh"];
           <br /> <br /> <br />
           <Child1 onClick={handleClickMe} />
           <br />
-          <Child2 />
+          <Child2 name={firstname}/>
           <br />
           <Child3 data={memorizedvalue}/>
           <br />

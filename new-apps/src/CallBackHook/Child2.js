@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const Child2 = () => {
-    console.log("i am Child 2");
-    
+const Child2 = React.memo(({ name }) => {
+  console.log("i am Child 2");
+
   return (
-    <div>Child2</div>
-  )
-}
+    <div>
+      <h1>Child2</h1>
+      <p>{name}</p>
+    </div>
+  );
+});
 
-export default Child2
+export default Child2;
+
