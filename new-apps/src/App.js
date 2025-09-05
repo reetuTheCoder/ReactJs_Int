@@ -6,6 +6,7 @@ import {
   Timer,
   WindowSize,
 } from "./Study/StateManage/SideEffect";
+import PerformanceOptimization, { DerivedState } from "./Study/StateManage/PerformanceOptimization";
 // import ContactForms from "./contactForms/ContactForms";
 // import CounterApps from "./counter/CounterApps";
 // import TodoTask from "./TodoTask/TodoTask";
@@ -15,7 +16,7 @@ function App() {
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      console.log("Runs once after 3s");
+      // console.log("Runs once after 3s");
       setShowTimer(false);
     }, 3000);
 
@@ -29,7 +30,8 @@ function App() {
       <ContactForms />
       <br /> <br /> <br />
       <TodoTask /> */}
-      <CreateCounter />
+      
+      {/* <CreateCounter />
       <br /> <br /> <br />
       <button onClick={() => setShowTimer(!showTimer)}>
         {showTimer ? "Unmount Timer" : "Mount Timer"}
@@ -38,7 +40,12 @@ function App() {
       <br /> <br /> <br />
       <LocalStorageExample />
       <br /> <br /> <br />
-      <WindowSize />
+      <WindowSize /> */}
+
+      <div>
+        <PerformanceOptimization/>
+        <DerivedState />
+      </div>
     </div>
   );
 }
