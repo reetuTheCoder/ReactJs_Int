@@ -18,7 +18,7 @@ function App() {
 
   const handleClickMe = useCallback(() => {
     console.log("just testing to pass in the child");
-  });
+  },[]);
   // const [showTimer, setShowTimer] = useState(true);
 
   // useEffect(() => {
