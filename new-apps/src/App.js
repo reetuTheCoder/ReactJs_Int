@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import Child1 from "./CallBackHook/Child1";
+import Child2 from "./CallBackHook/Child2";
 // import {
 //   CreateCounter,
 //   LocalStorageExample,
@@ -12,6 +14,11 @@ import "./App.css";
 // import TodoTask from "./TodoTask/TodoTask";
 
 function App() {
+  const [count, setCount] = useState(0);
+
+  const handleClickMe = () => {
+    console.log("just testing to pass in the child");
+  };
   // const [showTimer, setShowTimer] = useState(true);
 
   // useEffect(() => {
@@ -30,7 +37,7 @@ function App() {
       <ContactForms />
       <br /> <br /> <br />
       <TodoTask /> */}
-      
+
       {/* <CreateCounter />
       <br /> <br /> <br />
       <button onClick={() => setShowTimer(!showTimer)}>
@@ -46,6 +53,20 @@ function App() {
         <PerformanceOptimization/>
         <DerivedState />
       </div> */}
+
+      <div>
+        <div>
+          <div>
+          <h1>Learn callback hook</h1>
+          <p>Count: {count}</p>
+          <button onClick={()=> setCount(count + 1)}>Add</button>
+        </div>
+        <br/> <br/> <br/>
+        <Child1/>
+         <br/>
+        <Child2/>
+        </div>
+      </div>
     </div>
   );
 }
