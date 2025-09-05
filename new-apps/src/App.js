@@ -28,7 +28,13 @@ function App() {
   },[count])
 
   
-  const userlist = ["Reetu", "Alakh", "Naksh"];
+  // const userlist = ["Reetu", "Alakh", "Naksh"];
+
+  
+const memorizedUserList = useMemo(()=>{
+return ["Reetu", "Alakh", "Naksh"];
+},[])
+
   // const [showTimer, setShowTimer] = useState(true);
 
   // useEffect(() => {
@@ -78,7 +84,7 @@ function App() {
           <br />
           <Child3 data={memorizedvalue}/>
           <br />
-          <Child4 list={userlist}/>
+          <Child4 list={memorizedUserList}/>
         </div>
       </div>
     </div>
