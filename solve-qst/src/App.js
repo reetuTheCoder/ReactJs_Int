@@ -3,6 +3,7 @@ import "./App.css";
 import SaveLSInputData from "./Componnet/SaveLSInputData";
 import MainProgressBar from "./Componnet/ProgressBar";
 import SelectAllListItems from "./Componnet/SelectAllListItems";
+import HoverCount from "./Componnet/HoverCount";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <MainProgressBar />
       <br /> <br /> <br />
       <SelectAllListItems />
+      <br /> <br /> <br />
+      <HoverCount/>
     </div>
   );
 }
