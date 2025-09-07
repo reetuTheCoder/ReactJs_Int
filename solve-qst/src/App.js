@@ -5,6 +5,7 @@ import MainProgressBar from "./Componnet/ProgressBar";
 import SelectAllListItems from "./Componnet/SelectAllListItems";
 import HoverCount from "./Componnet/HoverCount";
 import InputMsgEnter from "./Componnet/InputMsgEnter";
+import BuutonActionOnClick from "./Componnet/BuutonActionOnClick";
 
 function App() {
   return (
@@ -15,9 +16,11 @@ function App() {
       <br /> <br /> <br />
       <SelectAllListItems />
       <br /> <br /> <br />
-      <HoverCount/>
+      <HoverCount />
       <br /> <br /> <br />
-      <InputMsgEnter/>
+      <InputMsgEnter />
+      <br /> <br /> <br />
+      <BuutonActionOnClick />
     </div>
   );
 }
