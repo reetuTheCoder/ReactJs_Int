@@ -3,6 +3,7 @@ import "./App.css";
 import ReactionTestGame from "./Componnet/ReactionTestGame";
 import ValidateForm from "./Componnet/ValidateForm";
 import LabelFilterDashboard from "./Componnet/LabelFilterDashboard";
+import ThemeToggle from "./Componnet/ThemeToggle";
 
 function App() {
   return (
@@ -12,10 +13,14 @@ function App() {
       <br />
       <br />
       <ValidateForm />
-      <br/>
-      <br/>
-      <br/>
-      <LabelFilterDashboard/>
+      <br />
+      <br />
+      <br />
+      <LabelFilterDashboard />
+      <br />
+      <br />
+      <br />
+      <ThemeToggle />
     </div>
   );
 }
