@@ -4,6 +4,7 @@ import useTheme from "../useTheme";
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
 
+  
   return (
     <div style={{ textAlign: "center", marginTop: "50px" }}>
       <h1>Current Theme: {theme}</h1>
