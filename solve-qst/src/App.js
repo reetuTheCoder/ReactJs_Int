@@ -4,6 +4,7 @@ import SaveLSInputData from "./Componnet/SaveLSInputData";
 import MainProgressBar from "./Componnet/ProgressBar";
 import SelectAllListItems from "./Componnet/SelectAllListItems";
 import HoverCount from "./Componnet/HoverCount";
+import InputMsgEnter from "./Componnet/InputMsgEnter";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <SelectAllListItems />
       <br /> <br /> <br />
       <HoverCount/>
+      <br /> <br /> <br />
+      <InputMsgEnter/>
     </div>
   );
 }
