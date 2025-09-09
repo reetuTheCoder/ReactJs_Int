@@ -4,6 +4,7 @@ import ReactionTestGame from "./Componnet/ReactionTestGame";
 import ValidateForm from "./Componnet/ValidateForm";
 import LabelFilterDashboard from "./Componnet/LabelFilterDashboard";
 import ThemeToggle from "./Componnet/ThemeToggle";
+import TimerWithLocalSt from "./Componnet/ExpertLevelQst/TimerWithLocalSt";
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
       <br />
       <br />
       <ThemeToggle />
+
+      <TimerWithLocalSt/>
     </div>
   );
 }
